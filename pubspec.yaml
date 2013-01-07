@@ -1,0 +1,9 @@
+name:  dart_events
+description:  >
+  A simple event system for Dart based on
+  implementations done in JavaScript or ActionScript3
+author: Julien Castelain <jcastelain@gmail.com>
+version: 0.0.1
+dependencies:
+  unittest: any
+
