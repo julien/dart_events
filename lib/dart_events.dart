@@ -41,7 +41,6 @@ class EventEmitter {
         // Stack Trace: #0      Function.apply (dart:core-patch:729:5)
         // Function.apply(item, ...);
         // but I'd like to use Function.apply ...
-
         item(data);
       });
     }

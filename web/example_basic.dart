@@ -1,38 +1,24 @@
 import 'dart:html';
-import 'package:/unittest/unittest.dart';
 import '../lib/dart_events.dart';
 
 
 void handler(List<dynamic> a) {
   args = a;
+  window.alert(args.toString());
 }
 
 List<dynamic> args;
 
 void main() {
-
   EventEmitter emitter = new EventEmitter();
+  emitter.on('test', handler);
 
-  test('it only add the same Function once', () {
-    emitter.on('test', handler);
-    emitter.on('test', handler);
-    expect(emitter.listeners().length, equals(1));
-  });
-
-  test('it should remove a Function if it exists', () {
-    emitter.off('NON_EXISTING', handler);
-    expect(emitter.listeners().length, equals(1));
-  });
-
-  test('''
-it should call a listener Function 
-if a type of "event" is emitted and 
-is associtated to this type's listeners
-''', () {
-    emitter.emit('test', [1, 2, 3]);
-    expect(args, equals([1, 2, 3]));
-  });
-
+  ButtonElement btn = new ButtonElement()
+    ..text = 'Click me!'
+    ..on.click.add((e) {
+      emitter.emit('test', [1, 2, 3]);
+    });
+  document.body.append(btn);
 }
 
 
