@@ -7,7 +7,7 @@ homepage: https://github.com/julien/dart_events
 version: 0.0.4
 dependencies:
   unittest: any
-  browser: any
+  browser:  ">=0.0.1 <0.0.2"
 
 
 
