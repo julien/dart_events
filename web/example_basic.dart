@@ -8,11 +8,21 @@ void main() {
       window.alert(args.toString());
   });
 
+  /* < M3
   ButtonElement btn = new ButtonElement()
     ..text = 'Click me!'
     ..on.click.add((e) {
       emitter.emit('test', [1, 2, 3]);
     });
+  */
+
+  // >= M3
+  ButtonElement btn = new ButtonElement()
+    ..text = 'Click me'
+    ..onClick.listen((e) {
+      emitter.emit('test', [1, 2, 3]);
+    });
+
   document.body.append(btn);
 }
 
