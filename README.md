@@ -8,10 +8,7 @@ existing implementations done in JavaScript or ActionScript3.
 
 *Available at the Dart [pub](http://pub.dartlang.org)*
 
-**WARNING**
-*I you're on the M2 version of Dart, you'll probably get
-errors when importing the library because of the use of Streams
-However, the compatible "M2" code is commented out so it's easy to make it 
-working*
+**author**
 
+*Julien Castelain* <jcastelain@gmail.com>
 
