@@ -8,6 +8,8 @@ library dart_events;
 class EventEmitter {
   Map<String, List<Function>> _listeners = new Map<String, List<Function>>();
 
+  EventEmitter();
+
   on(String type, Function handler) {
     // Create the channel if it doesn't exist
     _listeners.putIfAbsent(type, () {
