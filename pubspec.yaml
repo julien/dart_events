@@ -6,8 +6,8 @@ author: Julien Castelain <jcastelain@gmail.com>
 homepage: https://github.com/julien/dart_events
 version: 0.0.7
 dependencies:
-  unittest: any
-  browser: any
+  unittest: ">=0.4.2 <0.4.3"
+  browser: ">=0.0.1 <0.0.2"
 
 
 
