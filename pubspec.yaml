@@ -4,10 +4,14 @@ description:  >
   implementations done in JavaScript or ActionScript3
 author: Julien Castelain <jcastelain@gmail.com>
 homepage: https://github.com/julien/dart_events
-version: 0.0.9
-dependencies:
-  unittest: any
-  browser: any
+version: 0.1.0
 
+environment:
+  sdk: ">=0.8.10+6 <2.0.0"
+
+dependencies:
+  unittest: "0.9.0"
+  browser: ">=0.9.0 < 0.10.0"
+  plummbur_kruk: ">=0.1.0 <0.1.1"
 
 

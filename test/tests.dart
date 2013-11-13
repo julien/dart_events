@@ -1,12 +1,5 @@
 import 'package:unittest/unittest.dart';
-
-
-// import 'dart:html';
-//import '../packages/unittest/unittest.dart';
-// import '../packages/unittest/html_enhanced_config.dart';
-
 import '../lib/dart_events.dart';
-
 
 void handler(List<dynamic> a) {
   args = a;
@@ -16,7 +9,6 @@ List<dynamic> args;
 
 void main() {
 
-  // useHtmlEnhancedConfiguration();
   group('basic tests', () {
     EventEmitter emitter = new EventEmitter();
 
