@@ -4,7 +4,7 @@ description:  >
   implementations done in JavaScript or ActionScript3
 author: Julien Castelain <jcastelain@gmail.com>
 homepage: https://github.com/julien/dart_events
-version: 0.1.0
+version: 0.1.1
 
 environment:
   sdk: ">=0.8.10+6 <2.0.0"

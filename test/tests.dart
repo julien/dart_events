@@ -1,13 +1,16 @@
 import 'package:unittest/unittest.dart';
+import 'package:unittest/html_enhanced_config.dart';
+
 import '../lib/dart_events.dart';
 
-void handler(List<dynamic> a) {
-  args = a;
+void handler(a) {
+  arg = a;
 }
-
-List<dynamic> args;
+var arg;
 
 void main() {
+  
+  useHtmlEnhancedConfiguration(false);
 
   group('basic tests', () {
     EventEmitter emitter = new EventEmitter();
@@ -25,7 +28,19 @@ void main() {
 
     test('should invoke handler when emitting events', () {
       emitter.emit('test', [1, 2, 3]);
-      expect(args, equals([1, 2, 3]));
+      expect(arg, equals([1, 2, 3]));      
+      emitter.emit('test', 'hello world');
+      expect(arg, equals('hello world'));
+    });
+    
+    test('should stop invoking handler after calling off', () {
+      // Set "arg" to our desired value
+      // to make sure it isn't affected.
+      arg = 'changed before test';
+      
+      emitter.off('test', handler);
+      emitter.emit('test', 'this is a test event');
+      expect(arg, equals('changed before test'));
     });
 
   });
