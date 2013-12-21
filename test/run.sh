@@ -32,24 +32,10 @@ fi
 echo
 echo "dartanalyzer lib/*.dart"
 
-dartanalyzer lib/eventemitter.dart
+dartanalyzer lib/dart_events.dart
 if [[ $? != 0 ]]; then
   exit 1
 fi
 
-dartanalyzer lib/models.dart
-if [[ $? != 0 ]]; then
-  exit 1
-fi
-
-dartanalyzer lib/router.dart
-if [[ $? != 0 ]]; then
-  exit 1
-fi
-
-dartanalyzer lib/views.dart
-if [[ $? != 0 ]]; then
-  exit 1
-fi
 
 
